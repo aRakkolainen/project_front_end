@@ -1,0 +1,9 @@
+$primary-color: rgb(212, 21, 21);
+* {
+    box-sizing: border-box;
+
+}
+body {
+    background: darken($primary-color,10);
+    color: #111;
+}

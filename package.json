@@ -1,0 +1,15 @@
+{
+  "name": "front-endproject",
+  "version": "1.0.0",
+  "description": "This is my project for front-end course",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "aRakkolainen",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "nodesass": "^0.0.2-security"
+  }
+}
