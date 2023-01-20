@@ -1,9 +1,54 @@
-$primary-color: rgb(212, 21, 21);
+@import 'config';
+
+
 * {
     box-sizing: border-box;
 
 }
 body {
-    background: darken($primary-color,10);
-    color: #111;
+    background: $primary-color;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.5;
+
 }
+
+
+
+h1,h2,h3 {
+    margin: 0;
+    font-weight:200;
+    &.heading-lg {
+        font-size: 4rem;
+    }
+    
+    //&.heading-md {
+        
+    //} 
+    //&.heading-sm {
+
+    //}
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.5rem;
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+
+            }
+        }
+    }
+}
+
+
