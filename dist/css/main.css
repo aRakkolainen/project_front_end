@@ -1,27 +1,47 @@
-* {
-  box-sizing: border-box; }
-
 body {
-  background: #333;
+  background: #000;
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   line-height: 1.5; }
+  body#background-img {
+    background: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body#background-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.7); }
 
 h1, h2, h3 {
   margin: 0;
-  font-weight: 200; }
+  font-weight: 250; }
   h1.heading-lg, h2.heading-lg, h3.heading-lg {
-    font-size: 4rem; }
+    text-align: center;
+    font-size: 4.5rem;
+    font-style: normal; }
+  h1.heading-md, h2.heading-md, h3.heading-md {
+    margin-top: 3rem;
+    font-size: 2.5rem; }
+  h1.heading-sm, h2.heading-sm, h3.heading-sm {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic; }
 
 .text-secondary {
-  color: #DB2BEA; }
+  color: #691e94;
+  font-weight: 4.5rem; }
 
 main .icons {
   margin-top: 1rem; }
   main .icons a {
-    padding: 0.5rem; }
+    padding: 0.4rem; }
     main .icons a:hover {
-      color: #DB2BEA;
-      transition: all 0.5s ease-in-out; }
+      color: #691e94;
+      transition: all 0.5s ease-out; }

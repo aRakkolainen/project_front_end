@@ -1,16 +1,12 @@
 @import 'config';
 
-
-* {
-    box-sizing: border-box;
-
-}
 body {
+    @include background();
     background: $primary-color;
     color: #fff;
     height: 100%;
     margin: 0;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5;
 
 }
@@ -19,21 +15,27 @@ body {
 
 h1,h2,h3 {
     margin: 0;
-    font-weight:200;
+    font-weight:250;
     &.heading-lg {
-        font-size: 4rem;
+        text-align:center;
+        font-size: 4.5rem;
+        font-style:normal;
     }
     
-    //&.heading-md {
-        
-    //} 
-    //&.heading-sm {
-
-    //}
+    &.heading-md {
+        margin-top: 3rem;
+        font-size: 2.5rem;
+    } 
+    &.heading-sm {
+        text-align:center;
+        font-size: 1.5rem;
+        font-style:italic;
+    }
 }
 
 .text-secondary {
     color: $secondary-color;
+    font-weight: 4.5rem;
 }
 
 main {
@@ -41,7 +43,7 @@ main {
         margin-top: 1rem;
 
         a {
-            padding: 0.5rem;
+            padding: 0.4rem;
             &:hover {
                 color: $secondary-color;
                 @include easeOut();
