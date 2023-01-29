@@ -1,3 +1,56 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 110vh;
+    background: black;
+    list-style: none;
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.75s ease-in; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+
+.nav-item {
+  color: #691e94;
+  font-size: 2.5rem;
+  font-style: normal; }
+  .nav-item.hover {
+    transition: all 0.5s ease-out;
+    color: #fff; }
+
 body {
   background: #000;
   color: #fff;
@@ -17,18 +70,20 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(0, 0, 0, 0.7); }
+      background: rgba(0, 0, 0, 0.5); }
 
 h1, h2, h3 {
   margin: 0;
   font-weight: 250; }
   h1.heading-lg, h2.heading-lg, h3.heading-lg {
+    margin-top: 4.5rem;
     text-align: center;
     font-size: 4.5rem;
     font-style: normal; }
   h1.heading-md, h2.heading-md, h3.heading-md {
     margin-top: 3rem;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    margin-left: 35px; }
   h1.heading-sm, h2.heading-sm, h3.heading-sm {
     text-align: center;
     font-size: 1.5rem;
@@ -39,9 +94,10 @@ h1, h2, h3 {
   font-weight: 4.5rem; }
 
 main .icons {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  margin-left: 35px; }
   main .icons a {
     padding: 0.4rem; }
     main .icons a:hover {
-      color: #691e94;
+      color: #fff;
       transition: all 0.5s ease-out; }
