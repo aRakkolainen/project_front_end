@@ -55,6 +55,82 @@ main {
             }
         }
     }
+    .about-information {
+        display: grid;
+        grid-gap: 25px;
+        grid-template-areas:
+        'bio-text1 bio-text2 bio-img'
+        'course1 course2 course3'
+        'course4 course5 course6'
+        'course7 course8 course9';
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bio-text1 {
+        grid-area: bio-text1;
+    }
+    .bio-text2 {
+        grid-area: bio-text2;
+        color: #fff; 
+    }
+    .bio-img {
+        grid-area: bio-img;
+        border-radius: 2px;
+        max-width: 50%;
+        height: 10mm;
+        width: 10mm;
+        box-sizing: content-box;
+        border-bottom:#fff 5px solid;  
+    }
+    .text {
+        grid-area: text;
+        font-size:2rem;
+    }
+    .course1 {
+        grid-area: course1; 
+    }
+    .course2 {
+        grid-area: course2; 
+
+    }
+    .course3 {
+        grid-area: course3;
+    }
+    .course4 {
+        grid-area: course4;
+    }
+    .course5 {
+        grid-area: course5;
+    }
+    .course6 {
+        grid-area: course6;
+        
+    }
+
+    .course7 {
+        grid-area: course7;
+    }
+    .course8 {
+        grid-area: course8;
+    }
+
+    .course9 {
+        grid-area: course9;
+    }
+    .course {
+        background: lighten($secondary-color,10);
+        padding: 1rem;
+        border-bottom: $secondary-color 5px solid;
+
+    }
 }
+
+#footer {
+    text-align: center; 
+    margin-top: 7.5rem;
+    padding: 1rem; 
+    background: darken($secondary-color, 10);
+    color: #ffff;
+}
+@import 'mobile';
 
 

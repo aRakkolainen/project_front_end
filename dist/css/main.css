@@ -101,3 +101,112 @@ main .icons {
     main .icons a:hover {
       color: #fff;
       transition: all 0.5s ease-out; }
+
+main .about-information {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-areas: 'bio-text1 bio-text2 bio-img' 'course1 course2 course3' 'course4 course5 course6' 'course7 course8 course9';
+  grid-template-columns: repeat(2, 1fr); }
+
+main .bio-text1 {
+  grid-area: bio-text1; }
+
+main .bio-text2 {
+  grid-area: bio-text2;
+  color: #fff; }
+
+main .bio-img {
+  grid-area: bio-img;
+  border-radius: 2px;
+  max-width: 50%;
+  height: 10mm;
+  width: 10mm;
+  box-sizing: content-box;
+  border-bottom: #fff 5px solid; }
+
+main .text {
+  grid-area: text;
+  font-size: 2rem; }
+
+main .course1 {
+  grid-area: course1; }
+
+main .course2 {
+  grid-area: course2; }
+
+main .course3 {
+  grid-area: course3; }
+
+main .course4 {
+  grid-area: course4; }
+
+main .course5 {
+  grid-area: course5; }
+
+main .course6 {
+  grid-area: course6; }
+
+main .course7 {
+  grid-area: course7; }
+
+main .course8 {
+  grid-area: course8; }
+
+main .course9 {
+  grid-area: course9; }
+
+main .course {
+  background: #8727be;
+  padding: 1rem;
+  border-bottom: #691e94 5px solid; }
+
+#footer {
+  text-align: center;
+  margin-top: 7.5rem;
+  padding: 1rem;
+  background: #4b156a;
+  color: #ffff; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
