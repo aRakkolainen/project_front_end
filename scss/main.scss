@@ -48,8 +48,9 @@ main {
 
         a {
             padding: 0.4rem;
+            color: $primary-color;
             &:hover {
-                color: #fff;
+                color: $primary-color;
                 @include easeOut();
 
             }
