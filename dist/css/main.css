@@ -217,30 +217,40 @@ main .course {
 
 .projects {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 2rem;
+  margin-right: 2rem;
   justify-content: space-between;
   align-items: left;
-  grid-template-columns: 'project1 ' 'project2 link2' 'project3 link3';
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: 'project_img1 projectDescription1 projectSourcecode1' 'project_img2 projectDescription2 projectSourcecode2' 'project_img3 projectDescription3 projectSourcecode3';
+  grid-template-columns: repeat(2, 3fr); }
 
-.mobileProject {
-  grid-area: project1; }
+.projectDescription1 {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: projectDescription1;
+  border: #691e94 3px solid;
+  justify-content: space-between; }
+  .projectDescription1 .project-link {
+    grid-area: projectDescription1;
+    font-style: normal; }
 
-.link1 {
-  grid-area: link1; }
+.projectDescription2 {
+  grid-area: projectDescription2;
+  border: #691e94 3px solid;
+  justify-content: space-between; }
+  .projectDescription2 .projectlink2 {
+    grid-area: projectSourcecode2; }
 
-.movieProject {
-  grid-area: project2; }
-
-.portfolioProject {
-  grid-area: project3; }
+.projectDescription3 {
+  grid-area: projectDescription3;
+  border: #691e94 3px solid;
+  justify-content: space-between; }
+  .projectDescription3 .projectSourcecode3 {
+    grid-area: projectSourcecode3; }
 
 .project {
-  font-size: 3rem;
+  font-size: 1rem;
   color: #fff;
-  text-decoration: none; }
-
-.project-link {
   text-decoration: none; }
 
 .boxes {
