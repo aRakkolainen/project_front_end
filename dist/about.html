@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
 </head>
-<body>
+<body id="background-img">
     <header> <!-- This is based on the tutorial video 2!-->
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -21,9 +21,9 @@
                         Home
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item current">
                     <a href="about.html" class="nav-link">
-                        Get to know more about me
+                        Get to know me
                     </a>
                 </li>
                 <li class="nav-item">
@@ -40,77 +40,80 @@
         </nav>
     </header>
     <main>
-        <h1 class="lg-heading">
+    <div class="about-information">
+        <h1 class="title">
             About Me
         </h1>
-    <div class="about-information">
-    <div class="bio-img"> <img src="img/bio-image.jpg" alt="Aino Räkköläinen"> </div>  
-    <div class="bio">
-        <h3 class="bio-text1">
-            My name is Aino Räkköläinen and I'm a software engineering student at LUT University. <br>
-            At the moment, I am studying my second year and this website is part of my front-end course. <br>
-        </h3>
-        <h3 class="bio-text2">
-            I'm enthuastic about learning new programming languages and technologies. <br>
-            My dream is to become user-oriented software developer or front-end developer in the future.
-        </h3>
-    </div>
-    <div class="text"> 
-        <h3>
-            Software engineering courses I'm taking or have taken:
-        </h3>
-    </div>
-    <div class="course course1">
-        <h3>Basics of Database Systems
-            <li>Learned basics of SQL</li>
-            <li>Learned to build databases with SQLite</li>
-        </h3>
-    </div>
-    <div class="course course2">
-        <h3>Basics of Software Testing</h3>
-        <li>Learned how to write test cases (unit and integration) in Java</li>
-        <li>Did system testing for open-source software</li>
+        <div class="bio-img">
+            <img src="img/bio-image.jpg" alt="Aino Räkköläinen"> 
+        </div>
+        <div class="bio-text2">
+            <h3 class="bio-text2">
+                I'm Aino, a software engineering student at LUT University who is enthuastic about learning new programming languages and technologies.
+                My dream and career goal is to become front-end or software developer, with the longer-term aspiration of moving into designing user interfaces and improving usability. 
+            </h3>
+        </div>        
+        <div class="text"> 
+            <h3>
+                Software engineering courses I'm taking or have taken:
+            </h3>
+        </div>
     </div>
 
-    <div class="course course3">
-        <h3>Software development skills: Mobile
-             <li>Learned about development in Android Studio</li>
-             <li>Developed digital cooking recipe book</li>
-        </h3>
-    </div>
-    <div class="course course4">
-        <h3>Object-oriented programming
-            <li> Learned coding in Java</li>
-            <li> Developed a movie reviewing application with team</li>
-        </h3>
+    <div class="courses">
+        <div class="course course1">
+            <h3>Basics of Database Systems
+                <li>Learned basics of SQL</li>
+                <li>Learned to build databases with SQLite</li>
+            </h3>
+        </div>
+        <div class="course course2">
+            <h3>Basics of Software Testing</h3>
+            <li>Learned how to write test cases (unit and integration) in Java</li>
+            <li>Did system testing for open-source software in group project</li>
+        </div>
+        <div class="course course3">
+            <h3>Software development skills: Mobile
+                 <li>Learned about development in Android Studio</li>
+                 <li>Developed digital cooking recipe book application</li>
+            </h3>
+        </div>
+        <div class="course course4">
+            <h3>Object-oriented programming
+                <li> Learned coding in Java</li>
+                <li> Developed a movie reviewing application with team</li>
+            </h3>
+        </div>
+            <div class="course course5">
+            <h3>User interfaces and usability</h3>
+                <li>Learned basics of designing user interfaces</li>
+                <li>Learned basics of Dart and Flutter</li>
+        </div>
+            <div class="course course6">
+                <h3>Basics of C-programming (in Finnish)
+                    <li>Learned basics of C</li>
+                </h3>
+        </div>
+            <div class="course course7">
+                <h3>Basics of programming (in Finnish)
+                    <li>Learned basics of Python and basic principles of programming</li>
+                </h3>
+        </div>
+            <div class="course course8">
+                <h3>Basics of Linux</h3>
+                <li>Learned basics of Linux operation system</li>
+                <li>Learned Bash scripting</li>
+            </div>
+    
+            <div class="course course9">
+                <h3>Software engineering </h3>
+                <li>Learned basics of Software development processes and methods
+                </li>
+            </div>
+        </div>
     </div>
 
-    <div class="course course5">
-        <h3>User interfaces and usability</h3>
-            <li>Learned basics of designing user interfaces</li>
-            <li>Learned basics of Dart and Flutter</li>
-    </div>
-    <div class="course course6">
-        <h3>Basics of C-programming (in Finnish)
-            <li>Learned basics of C</li>
-        </h3>
-    </div>
-    <div class="course course7">
-        <h3>Basics of programming (in Finnish)
-            <li>Learned basics of Python and basic principles of programming</li>
-        </h3>
-    </div>
-    <div class="course course8">
-        <h3>Basics of Linux</h3>
-        <li>Learned basics of Linux operation system</li>
-        <li>Learned Bash scripting</li>
-    </div>
-
-    <div class="course course9">
-        <h3>Software engineering </h3>
-        <li>Learned basics of Software development processes and methods
-        </li>
-    </div>
+   
 
 
     </div>

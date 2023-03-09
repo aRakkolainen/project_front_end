@@ -32,6 +32,14 @@ $background-opacity: 0.5;
 
     }
 }
+// Setting Text Color based on Tutorial video 5 From Serie Responsive Portfolio Website By Traversy Media
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
 
 // Media Query Mixins (These are needed to make it responsive)
 

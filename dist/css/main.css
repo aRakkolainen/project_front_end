@@ -35,22 +35,57 @@
     justify-content: center;
     float: left;
     width: 50%;
-    height: 110vh;
+    height: 110vh; }
+  .menu-nav {
     background: black;
     list-style: none;
     transform: translate3d(100%, 0, 0);
-    transition: all 0.75s ease-in; }
+    transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
+  .menu .nav-item {
+    transform: translate3d(-2000px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #691e94; }
+  .menu .nav-link {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    font-weight: 300;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link.hover {
+      color: #691e94; }
 
-.nav-item {
-  color: #691e94;
-  font-size: 2.5rem;
-  font-style: normal; }
-  .nav-item.hover {
-    transition: all 0.5s ease-out;
-    color: #fff; }
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
 
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+/*.nav-item {
+    color: #fff;
+    font-size: 2.5rem;
+    &.hover {
+        @include easeOut;
+        color: $secondary-color;
+    }
+    .current > a{
+        color: $secondary-color;
+    }
+    
+}*/
 body {
   background: #000;
   color: #fff;
@@ -77,6 +112,7 @@ h1, h2, h3 {
   font-weight: 250; }
   h1.heading-lg, h2.heading-lg, h3.heading-lg {
     margin-top: 4.5rem;
+    margin-left: 3rem;
     text-align: center;
     font-size: 4.5rem;
     font-style: normal; }
@@ -97,36 +133,54 @@ main .icons {
   margin-top: 1rem;
   margin-left: 35px; }
   main .icons a {
-    padding: 0.4rem; }
+    padding: 0.4rem;
+    color: #ffff; }
     main .icons a:hover {
-      color: #fff;
+      color: #691e94;
       transition: all 0.5s ease-out; }
+
+main .title {
+  margin-left: 2rem;
+  font-size: 4.5rem;
+  text-align: left;
+  color: #8727be; }
 
 main .about-information {
   display: grid;
-  grid-gap: 25px;
-  grid-template-areas: 'bio-text1 bio-text2 bio-img' 'course1 course2 course3' 'course4 course5 course6' 'course7 course8 course9';
+  grid-gap: 20px;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  text-align: justify;
+  grid-template-areas: 'bio-text1 bio-text2 bio-img' 'text text1 text2';
+  grid-template-columns: repeat(2, 1fr); }
+
+main .courses {
+  display: grid;
+  grid-gap: 30px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  grid-template-areas: 'course1 course2 course3' 'course4 course5 course6' 'course7 course8 course9';
   grid-template-columns: repeat(2, 1fr); }
 
 main .bio-text1 {
   grid-area: bio-text1; }
 
 main .bio-text2 {
-  grid-area: bio-text2;
-  color: #fff; }
+  grid-area: bio-text2; }
 
 main .bio-img {
   grid-area: bio-img;
-  border-radius: 2px;
-  max-width: 50%;
-  height: 10mm;
-  width: 10mm;
-  box-sizing: content-box;
-  border-bottom: #fff 5px solid; }
+  border: #4b156a 5px solid;
+  margin-right: 2rem;
+  /*border-top: darken($secondary-color, 10) 5px solid;
+        border-bottom: darken($secondary-color, 10) 5px solid;
+        border-left:  darken($secondary-color, 10) 5px solid;
+        border-right: darken($secondary-color, 10) 5px solid;*/ }
 
 main .text {
   grid-area: text;
-  font-size: 2rem; }
+  text-align: center;
+  padding-bottom: 1rem; }
 
 main .course1 {
   grid-area: course1; }
@@ -157,8 +211,55 @@ main .course9 {
 
 main .course {
   background: #8727be;
-  padding: 1rem;
-  border-bottom: #691e94 5px solid; }
+  padding: 0.5rem;
+  justify-content: space-evenly;
+  border: #691e94 4px solid; }
+
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  justify-content: space-between;
+  align-items: left;
+  grid-template-columns: 'project1 ' 'project2 link2' 'project3 link3';
+  grid-template-columns: repeat(2, 1fr); }
+
+.mobileProject {
+  grid-area: project1; }
+
+.link1 {
+  grid-area: link1; }
+
+.movieProject {
+  grid-area: project2; }
+
+.portfolioProject {
+  grid-area: project3; }
+
+.project {
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none; }
+
+.project-link {
+  text-decoration: none; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #4b156a solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      background-color: #691e94;
+      color: #fff; }
+      .boxes div:hover span {
+        color: #fff; }
 
 #footer {
   text-align: center;
@@ -192,21 +293,22 @@ main .course {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  .title {
+    margin-left: 1rem;
+    font-size: 3rem;
+    text-align: left;
+    color: #8727be; }
+  .about-information {
+    grid-template-areas: 'bio-text1  bio-text2 bio-img' 'text  text1  text2';
+    grid-template-columns: repeat(1, 1fr); }
+  .courses {
+    grid-template-areas: 'course1 course2' 'course3 course4' 'course5 course6' 'course7 course8' 'course9';
+    grid-template-columns: repeat(1, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
-  .projects {
-    grid-template-columns: 1fr; } }
+  .courses {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+    grid-template-areas: 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9'; } }

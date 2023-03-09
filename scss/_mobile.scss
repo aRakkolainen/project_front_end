@@ -42,27 +42,31 @@
         transform: translate3d(-100%,0,0);
         font-size: 24px;
     }
-    .menu-branding {
-        height:25vh;
-        transform: translate3d(100%,0,0);
-
-        .portrait {
-            background: url('../img/portrait_small.jpg');
-            width:150px;
-            height:150px;
-        }
+    .title {
+        margin-left: 1rem; 
+        font-size:3rem; 
+        text-align: left;
+        color: lighten($secondary-color,10);
     }
-    .about-info {
+    .about-information {
+        grid-template-areas:
+        'bio-text1 
+        bio-text2
+        bio-img'
+        'text 
+        text1 
+        text2';
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .courses {
         grid-template-areas: 
-        'bioimage'
-        'bio'
-        'job1'
-        'job2'
-        'job3';
-        grid-template-columns: 1fr;
-    }
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
+        'course1 course2'
+        'course3 course4'
+        'course5 course6'
+        'course7 course8'
+        'course9';
+        grid-template-columns: repeat(1, 1fr);
+
     }
 }
 
@@ -71,8 +75,19 @@
     main#home h1 {
         margin-top: 10vh;
     } 
-    .projects {
+    .courses {
         grid-template-columns: 1fr;
+        font-size: 1rem;
+        grid-template-areas: 
+        'course1'
+        'course2'
+        'course3'
+        'course4'
+        'course5'
+        'course6'
+        'course7'
+        'course8'
+        'course9';
     }
 
 

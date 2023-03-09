@@ -4,7 +4,7 @@
 body {
     @include background();
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -19,6 +19,7 @@ h1,h2,h3 {
     font-weight:250;
     &.heading-lg {
         margin-top: 4.5rem;
+        margin-left: 3rem;
         text-align:center;
         font-size: 4.5rem;
         font-style:normal;
@@ -48,43 +49,63 @@ main {
 
         a {
             padding: 0.4rem;
-            color: $primary-color;
+            color: #ffff;
             &:hover {
-                color: $primary-color;
+                color: $secondary-color;
                 @include easeOut();
 
             }
         }
     }
+    .title {
+        margin-left: 2rem; 
+        font-size:4.5rem; 
+        text-align: left;
+        color: lighten($secondary-color,10);
+    }
+
     .about-information {
         display: grid;
-        grid-gap: 25px;
+        grid-gap: 20px;
+        margin-top:4rem;
+        margin-left: 2rem;
+        text-align:justify;
         grid-template-areas:
         'bio-text1 bio-text2 bio-img'
+        'text text1 text2';
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .courses {
+        display: grid; 
+        grid-gap:30px;
+        margin-left:2rem;
+        margin-right: 2rem;
+        grid-template-areas: 
         'course1 course2 course3'
         'course4 course5 course6'
         'course7 course8 course9';
         grid-template-columns: repeat(2, 1fr);
+        
     }
     .bio-text1 {
         grid-area: bio-text1;
     }
     .bio-text2 {
         grid-area: bio-text2;
-        color: #fff; 
     }
     .bio-img {
         grid-area: bio-img;
-        border-radius: 2px;
-        max-width: 50%;
-        height: 10mm;
-        width: 10mm;
-        box-sizing: content-box;
-        border-bottom:#fff 5px solid;  
+        border: darken($secondary-color, 10) 5px solid;
+        margin-right:2rem;
+        /*border-top: darken($secondary-color, 10) 5px solid;
+        border-bottom: darken($secondary-color, 10) 5px solid;
+        border-left:  darken($secondary-color, 10) 5px solid;
+        border-right: darken($secondary-color, 10) 5px solid;*/
     }
     .text {
         grid-area: text;
-        font-size:2rem;
+        text-align: center;
+        padding-bottom: 1rem;
     }
     .course1 {
         grid-area: course1; 
@@ -119,11 +140,71 @@ main {
     }
     .course {
         background: lighten($secondary-color,10);
-        padding: 1rem;
-        border-bottom: $secondary-color 5px solid;
-
+        padding: 0.5rem;
+        justify-content: space-evenly;
+        border: $secondary-color 4px solid;
     }
 }
+
+.projects {
+    display: grid; 
+    grid-gap: 20px; 
+    justify-content: space-between;
+    align-items: left; 
+    grid-template-columns: 
+    'project1 '
+    'project2 link2'
+    'project3 link3';
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mobileProject {
+    grid-area: project1; 
+}
+.link1{
+    grid-area: link1; 
+}
+.movieProject {
+    grid-area: project2; 
+}
+
+.portfolioProject {
+    grid-area: project3; 
+}
+.project {
+    font-size: 3rem; 
+    color: #fff;
+    text-decoration: none;
+}
+.project-link {
+    text-decoration: none; 
+}
+// Contact page
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem; 
+
+    div {
+        font-size: 2rem; 
+        border: 3px darken($secondary-color, 10) solid; 
+        padding: 1.5rem 2.5rem; 
+        margin-bottom: 3rem; 
+        @include easeOut; 
+
+        &:hover {
+            background-color: $secondary-color;
+            color: set-text-color($secondary-color);
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
+
+}
+
 
 #footer {
     text-align: center; 
