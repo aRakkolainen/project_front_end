@@ -2,17 +2,17 @@
 
 // Widescreens
 @include mediaXL {
-    .projects {
-        grid-template-columns: repeat(4, 1fr);
-    }
+    //.projects {
+      //  grid-template-columns: repeat(4, 1fr);
+    //}
 
 }
 
 // Desktops and Laptops
 @include mediaLg {
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    //.projects {
+      //  grid-template-columns: repeat(3, 1fr);
+    //}
 
 }
 
@@ -50,15 +50,14 @@
     }
     .about-information {
         grid-template-areas:
-        'bio-text1 
-        bio-text2
-        bio-img'
-        'text' 
-        'text1' 
-        'text2';
-        grid-template-columns: repeat(1, 1fr);
+        'title'
+        'subtitle'
+        'bio-img'
+        'bio-text';
+        grid-template-columns: repeat(3, 1fr);
     }
     .courses {
+        grid-gap:10px;
         grid-template-areas: 
         'course1 course2'
         'course3 course4'
@@ -67,6 +66,9 @@
         'course9';
         grid-template-columns: repeat(1, 1fr);
 
+    }
+    .course {
+        font-size:1rem; 
     }
 }
 

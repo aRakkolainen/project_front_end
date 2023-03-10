@@ -3,6 +3,8 @@ $secondary-color: #691e94;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
 $background-opacity: 0.5;
+$item-background-opacity: 0.2;
+$item-background-color: lighten($secondary-color, 30);
 
 // Creating the same mixin as created in the tutorial!
 @mixin easeOut{
@@ -31,6 +33,9 @@ $background-opacity: 0.5;
         }
 
     }
+}
+@mixin itemBackground {
+    background:rgba($item-background-color, $item-background-opacity);
 }
 // Setting Text Color based on Tutorial video 5 From Serie Responsive Portfolio Website By Traversy Media
 @function set-text-color($color) {

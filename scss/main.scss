@@ -1,3 +1,6 @@
+// Source: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns for how to use grid-template columns
+// This is also based on the tutorial series Responsive Portfolio Website By Traversy Media in YouTube.
+
 @import 'config';
 @import 'menu';
 
@@ -24,6 +27,14 @@ h1,h2,h3 {
         font-size: 4.5rem;
         font-style:normal;
     }
+    &.heading-lg-secondary {
+        margin-top: 3rem;
+        margin-left: 3rem;
+        text-align:left;
+        font-size: 4.5rem;
+        font-style:normal;
+        color: $secondary-color;
+    }
     
     &.heading-md {
         margin-top: 3rem;
@@ -34,6 +45,12 @@ h1,h2,h3 {
         text-align:center;
         font-size: 1.5rem;
         font-style:italic;
+    }
+    &.text-sm {
+        text-align:start; 
+        font-size:1rem;
+        font-style:normal;
+        margin:0.5rem;
     }
 }
 
@@ -57,23 +74,56 @@ main {
             }
         }
     }
+    .about-information {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-areas:
+        'title subtitle'
+        'bio-img bio-text';
+        grid-template-columns: repeat(2, 1fr);
+    }
     .title {
+        grid-area:title;  
+        padding:0.25rem;
         margin-left: 2rem; 
         font-size:4.5rem; 
         text-align: left;
         color: lighten($secondary-color,10);
     }
-
-    .about-information {
-        display: grid;
-        grid-gap: 20px;
-        margin-top:4rem;
-        margin-left: 2rem;
-        text-align:justify;
-        grid-template-areas:
-        'bio-text1 bio-text2 bio-img'
-        'text text1 text2';
-        grid-template-columns: repeat(2, 1fr);
+    .subtitle {
+        grid-area: subtitle;
+        padding:0.25rem;
+    }
+    .bio-text {
+        grid-area: bio-text;
+        text-align: justify;
+        //border-radius:50%;
+        margin-top: 1rem;
+        width:fit-content;
+        border: 3px darken($secondary-color, 10) solid; 
+        //padding: 1.5rem 2.5rem; 
+        //margin-bottom: 3rem; 
+    }
+    .bio {
+        margin: auto;
+        padding:0;
+        grid-area: bio-img;
+        border: darken($secondary-color, 10) 5px solid;
+    }
+    /*.bio-img {
+        @include itemBackground();
+        //grid-area: bio-img;
+        image-rendering:optimizeQuality;
+        margin:auto;
+        height:fit-content;
+    }*/
+    // Courses
+    .title_course {
+        font-weight:bolder; 
+        font-size:1rem; 
+        padding-top: 1rem; 
+        padding-bottom: 1rem; 
+        margin-left:2rem; 
     }
     .courses {
         display: grid; 
@@ -84,115 +134,182 @@ main {
         'course1 course2 course3'
         'course4 course5 course6'
         'course7 course8 course9';
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1.5fr);
         
-    }
-    .bio-text1 {
-        grid-area: bio-text1;
-    }
-    .bio-text2 {
-        grid-area: bio-text2;
-    }
-    .bio-img {
-        grid-area: bio-img;
-        border: darken($secondary-color, 10) 5px solid;
-        margin-right:2rem;
-        /*border-top: darken($secondary-color, 10) 5px solid;
-        border-bottom: darken($secondary-color, 10) 5px solid;
-        border-left:  darken($secondary-color, 10) 5px solid;
-        border-right: darken($secondary-color, 10) 5px solid;*/
-    }
-    .text {
-        grid-area: text;
-        text-align: center;
-        padding-bottom: 1rem;
     }
     .course1 {
         grid-area: course1; 
+    }
+    .course_title1 {
+        font-weight:bolder;
+        text-align:center; 
+    }
+    .course_content1 {
+        font-size:1rem;
+        text-align:left;
+        padding:1rem; 
     }
     .course2 {
         grid-area: course2; 
 
     }
+    .course_title2 {
+        font-weight:bolder;
+        text-align:center; 
+    }
+    .course_content2 {
+        font-size:1rem;
+        text-align:left;
+        padding:1rem; 
+    }
     .course3 {
         grid-area: course3;
+    }
+    .course_title3 {
+        font-weight:bolder; 
+        text-align:center; 
+    }
+    .course_content3 {
+        font-size: 1rem;
+        text-align:left;  
+        padding:1rem; 
     }
     .course4 {
         grid-area: course4;
     }
+    .course_title4 {
+        font-weight:bolder; 
+        text-align:center; 
+    }
+    .course_content4 {
+        font-size: 1rem;
+        text-align:left;
+        padding:1rem;   
+    }
     .course5 {
         grid-area: course5;
+    }
+    .course_title5 {
+        font-weight:bolder; 
+        text-align:center; 
+    }
+    .course_content5 {
+        font-size: 1rem;
+        text-align:left;
+        padding:1rem;   
     }
     .course6 {
         grid-area: course6;
         
     }
+    .course_title6 {
+        font-weight:bolder; 
+        text-align:center; 
+    }
+    .course_content6 {
+        font-size: 1rem;
+        text-align:left;
+        padding:1rem;   
+    }
 
     .course7 {
         grid-area: course7;
     }
+    .course_title7 {
+        font-weight:bolder;
+        text-align:center;  
+    }
+    .course_content7 {
+        font-size: 1rem;
+        text-align:left;
+        padding:1rem;   
+    }
     .course8 {
         grid-area: course8;
+    }
+    .course_title8 {
+        font-weight:bolder; 
+        text-align:center; 
+    }
+    .course_content8 {
+        font-size: 1rem;
+        text-align:left; 
+        padding:1rem;  
     }
 
     .course9 {
         grid-area: course9;
     }
+    .course_title9 {
+        font-weight:bolder; 
+        text-align:center; 
+    }
+    .course_content9 {
+        font-size: 1rem;
+        text-align:left;
+        padding:1rem; 
+    }
     .course {
-        background: lighten($secondary-color,10);
-        padding: 0.5rem;
+        @include itemBackground();
+        //background: lighten($secondary-color,10);
         justify-content: space-evenly;
-        border: $secondary-color 4px solid;
+        border: $secondary-color 5px solid;
     }
+    // Projects page
+    .projects {
+        display: grid; 
+        grid-gap: 15px;
+        padding: 1rem; 
+        grid-template-areas: 
+        'project1 project2'
+        'project3 project4';
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project1 {
+        grid-area: project1;
+    }
+    .project2 {
+        grid-area: project2;
+    }
+    .project3 {
+        grid-area: project3; 
+    }
+    .project4 {
+        grid-area: project4; 
+    }
+    .project {
+        @include itemBackground();
+        color: set-text-color($primary-color);
+        text-decoration: none;  
+        border:$secondary-color 3px solid; 
+    } 
+    .link {
+        color:set-text-color($primary-color); 
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+        font-style: italic;
+        padding: 1.25rem;
+        &:hover {
+            color: $secondary-color;
+            @include easeOut();
+
+        }
+    }
+    .link3 {
+        font-style:italic;
+    }
+    .link2 {
+        font-style:italic;
+    }
+    .link4 {
+        font-style:italic;
+    }
+    
+    
 }
 
-.projects {
-    display: grid; 
-    grid-gap: 2rem; 
-    margin-right:2rem; 
-    justify-content: space-between;
-    align-items: left; 
-    grid-template-columns: 
-    'project_img1 projectDescription1 projectSourcecode1'
-    'project_img2 projectDescription2 projectSourcecode2'
-    'project_img3 projectDescription3 projectSourcecode3';
-    grid-template-columns: repeat(2, 3fr);
-}
 
-.projectDescription1 {
-    display: flex; 
-    flex-wrap: wrap;
-    grid-area: projectDescription1; 
-    border: $secondary-color 3px solid;
-    justify-content: space-between;
-    .project-link {
-        grid-area: projectDescription1; 
-        font-style:normal;
-    }
-}
-.projectDescription2 {
-    grid-area: projectDescription2;
-    border: $secondary-color 3px solid;
-    justify-content: space-between;
-    .projectlink2 {
-        grid-area: projectSourcecode2; 
-    }
-
-}
-
-.projectDescription3 {
-    grid-area: projectDescription3; 
-    border: $secondary-color 3px solid;
-    justify-content: space-between;
-    .projectSourcecode3 {
-        grid-area: projectSourcecode3;
-    }
-}
-.project {
-    font-size: 1rem; 
-    color: #fff;
-    text-decoration: none;
-}
 
 // Contact page
 .boxes {
@@ -226,7 +343,7 @@ main {
     margin-top: 7.5rem;
     padding: 1rem; 
     background: darken($secondary-color, 10);
-    color: #ffff;
+    color: set-text-color($primary-color);
 }
 @import 'mobile';
 
