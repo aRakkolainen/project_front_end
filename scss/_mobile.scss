@@ -28,7 +28,7 @@
         }
     } 
 
-    ul.menu-nav, div.menu-branding {
+    ul.menu-nav {
         float: none;
         width: 100%;
         min-height:0;
@@ -53,8 +53,9 @@
         'title'
         'subtitle'
         'bio-img'
-        'bio-text';
-        grid-template-columns: repeat(3, 1fr);
+        'biotext';
+        grid-template-columns: repeat(4, 1fr);
+        text-align:center;
     }
     .courses {
         grid-gap:10px;

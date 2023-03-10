@@ -60,6 +60,7 @@ h1,h2,h3 {
 }
 
 main {
+    min-height:calc(100vh - 65px);
     .icons {
         margin-top: 1rem;
         margin-left: 35px;
@@ -76,16 +77,15 @@ main {
     }
     .about-information {
         display: grid;
-        grid-gap: 0.5rem;
+        grid-gap: 0px;
         grid-template-areas:
         'title subtitle'
         'bio-img bio-text';
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1.5fr);
     }
     .title {
         grid-area:title;  
-        padding:0.25rem;
-        margin-left: 2rem; 
+        margin-left: 10rem; 
         font-size:4.5rem; 
         text-align: left;
         color: lighten($secondary-color,10);
@@ -93,30 +93,36 @@ main {
     .subtitle {
         grid-area: subtitle;
         padding:0.25rem;
+        margin-left: 5rem;
+        text-align:center;
+        text-transform:uppercase;
+        font-size:3.5rem;
     }
     .bio-text {
+        @include itemBackground();
+        display:flex;
         grid-area: bio-text;
         text-align: justify;
-        //border-radius:50%;
-        margin-top: 1rem;
+        font-size:1rem;
+        padding-top:2.5rem;
+        padding-bottom:2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2rem;
+        margin:2.5rem;
         width:fit-content;
-        border: 3px darken($secondary-color, 10) solid; 
-        //padding: 1.5rem 2.5rem; 
-        //margin-bottom: 3rem; 
+        border-radius:25%;
+        border:darken($secondary-color,10) 3px solid; 
     }
-    .bio {
-        margin: auto;
-        padding:0;
-        grid-area: bio-img;
-        border: darken($secondary-color, 10) 5px solid;
-    }
-    /*.bio-img {
+    .bio-img {
         @include itemBackground();
-        //grid-area: bio-img;
-        image-rendering:optimizeQuality;
+        grid-area: bio-img;
+        justify-content: space-evenly;
         margin:auto;
-        height:fit-content;
-    }*/
+        padding:0;
+        image-resolution:inherit;
+        border:darken($secondary-color,10) 3px solid; 
+    }
+
     // Courses
     .title_course {
         font-weight:bolder; 
@@ -340,8 +346,9 @@ main {
 
 #footer {
     text-align: center; 
-    margin-top: 7.5rem;
-    padding: 1rem; 
+    margin:auto;
+    height:60px; 
+    margin-top:10px;
     background: darken($secondary-color, 10);
     color: set-text-color($primary-color);
 }
