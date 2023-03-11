@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "This is my project for front-end course",
   "main": "index.js",
+  "homepage": "https://aRakkolainen.github.io/project_front_end",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "aRakkolainen",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "node-sass": "^8.0.0",
     "nodesass": "^0.0.2-security"
   }
