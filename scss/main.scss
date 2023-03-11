@@ -8,7 +8,8 @@ body {
     @include background();
     background: $primary-color;
     color: set-text-color($primary-color);
-    height: 100%;
+    height: 150%;
+    min-height:calc(100vh-50px);
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5;
@@ -47,10 +48,10 @@ h1,h2,h3 {
         font-style:italic;
     }
     &.text-sm {
-        text-align:start; 
+        text-align:justify; 
         font-size:1rem;
         font-style:normal;
-        margin:0.5rem;
+        margin:1.5rem;
     }
 }
 
@@ -60,7 +61,7 @@ h1,h2,h3 {
 }
 
 main {
-    min-height:calc(100vh - 65px);
+    min-height:calc(100vh - 50px);
     .icons {
         margin-top: 1rem;
         margin-left: 35px;
@@ -77,23 +78,22 @@ main {
     }
     .about-information {
         display: grid;
-        grid-gap: 0px;
+        grid-gap: 10px;
         grid-template-areas:
         'title subtitle'
         'bio-img bio-text';
-        grid-template-columns: repeat(2, 1.5fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .title {
         grid-area:title;  
-        margin-left: 10rem; 
-        font-size:4.5rem; 
-        text-align: left;
+        margin-left: 2rem; 
+        font-size:3.5rem; 
+        text-align: center;
         color: lighten($secondary-color,10);
     }
     .subtitle {
         grid-area: subtitle;
-        padding:0.25rem;
-        margin-left: 5rem;
+        margin-left: 1rem;
         text-align:center;
         text-transform:uppercase;
         font-size:3.5rem;
@@ -104,13 +104,9 @@ main {
         grid-area: bio-text;
         text-align: justify;
         font-size:1rem;
-        padding-top:2.5rem;
-        padding-bottom:2.5rem;
-        padding-left: 2.5rem;
-        padding-right: 2rem;
-        margin:2.5rem;
+        padding:2rem;
+        margin:2.25rem;
         width:fit-content;
-        border-radius:25%;
         border:darken($secondary-color,10) 3px solid; 
     }
     .bio-img {
@@ -287,29 +283,23 @@ main {
         @include itemBackground();
         color: set-text-color($primary-color);
         text-decoration: none;  
+        text-align: center;
         border:$secondary-color 3px solid; 
     } 
+    .text-secondary {
+        margin-left:1rem; 
+    }
     .link {
         color:set-text-color($primary-color); 
         font-size: 1rem;
+        padding-bottom:2rem;
+        text-align:center;
         text-decoration: none;
-        text-align: center;
-        font-style: italic;
-        padding: 1.25rem;
         &:hover {
-            color: $secondary-color;
+            color: lighten($secondary-color,15);
             @include easeOut();
 
         }
-    }
-    .link3 {
-        font-style:italic;
-    }
-    .link2 {
-        font-style:italic;
-    }
-    .link4 {
-        font-style:italic;
     }
     
     
@@ -318,12 +308,16 @@ main {
 
 
 // Contact page
+.head-text {
+    margin-left:1.5rem; 
+    margin-top:3rem;
+}
 .boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 1rem; 
+    margin-top: 7rem; 
 
     div {
         font-size: 2rem; 
@@ -347,8 +341,8 @@ main {
 #footer {
     text-align: center; 
     margin:auto;
-    height:60px; 
-    margin-top:10px;
+    height:50px; 
+    margin-top:5px;
     background: darken($secondary-color, 10);
     color: set-text-color($primary-color);
 }
